@@ -1,3 +1,7 @@
+# Acceso a una instancia de base de datos en una VPC desde una aplicación cliente a través de internet
+
+![image](https://github.com/user-attachments/assets/f7720ff2-0124-4729-b709-ff41b7f19a75)
+
 ## 1) Crear VPC
 
 ![image](https://github.com/user-attachments/assets/313e7a0b-ee34-4e02-8349-11616420a444)
