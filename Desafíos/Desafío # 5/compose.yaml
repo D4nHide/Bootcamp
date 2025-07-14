@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: .
+      target: desa
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/nest
+    depends_on:
+      - mongo
+    profiles:
+      - dev
+
+  app-prod:
+    build:
+      context: .
+      target: prod
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/nest
+    depends_on:
+      - mongo
+    profiles:
+      - prod
+
+  mongo:
+    image: mongo:6.0
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
