@@ -1,0 +1,9 @@
+- name: Desplegar WordPress con PHP y MySQL
+  hosts: webserver
+  become: yes
+
+  roles:
+    - apache
+    - php
+    - mysql
+    - wordpress
