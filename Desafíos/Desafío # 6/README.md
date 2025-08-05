@@ -46,3 +46,8 @@ ansible-wordpress/
 ├── wp-config.php.j2               # Plantilla Jinja2 
 └── vockey.pem                     # Clave privada para conectarte al EC2
 ```
+
+# Para usar este playbook:
+- Cambia la ip en el achivo hosts
+- Copiar la clave privado al archivo vockey.pem
+- Solo funciona para distros Debian (apt)
