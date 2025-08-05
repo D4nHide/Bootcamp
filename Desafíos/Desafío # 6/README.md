@@ -26,8 +26,8 @@ Playbook en ansible para desplegar un servidor LAMP + Wordpress
 ```
 ```
 ansible-wordpress/
-├── hosts                          # Inventario con IP del servidor y variables SSH
-├── playbook.yml                   # Playbook principal
+├── hosts                          # Inventario hosts IP y variables SSH
+├── playbook.yml                   # Playbook
 ├── group_vars/
 │   └── all.yml                    # Variables globales (MySQL, WordPress)
 ├── roles/
