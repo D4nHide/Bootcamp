@@ -51,3 +51,8 @@ ansible-wordpress/
 - Cambia la ip en el achivo hosts
 - Copiar la clave privado al archivo vockey.pem
 - Solo funciona para distros Debian (apt)
+
+# Correr Playbook
+```
+ansible-playbook -i hosts playbook.yml
+```
