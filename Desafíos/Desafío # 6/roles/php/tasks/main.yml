@@ -1,0 +1,17 @@
+- name: Instalar PHP y mÃ³dulos necesarios
+  apt:
+    name:
+      - php
+      - php-mysql
+      - libapache2-mod-php
+      - php-cli
+      - php-curl
+      - php-gd
+      - php-mbstring
+      - php-xml
+      - php-xmlrpc
+      - php-soap
+      - php-intl
+      - php-zip
+    state: present
+    update_cache: yes
