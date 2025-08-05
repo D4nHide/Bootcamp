@@ -1,0 +1,68 @@
+- name: Instalar PyMySQL para soporte de MySQL en Ansible
+  ansible.builtin.package:
+    name: python3-pymysql
+    state: present
+
+- name: Instalar MySQL Server
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
+
+- name: Verificar si existe /root/.my.cnf
+  stat:
+    path: /root/.my.cnf
+  register: mycnf
+
+- name: MYSQL - Change root user password
+  mysql_user:
+    name: root
+    password: "{{ mysql_root_password }}"
+    login_user: root
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+  when:
+    - mysql_root_password is defined
+    - mycnf.stat.exists == false
+
+- name: Eliminar usuarios anÃ³nimos
+  mysql_user:
+    name: ''
+    host_all: yes
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- name: Eliminar base de datos de test
+  mysql_db:
+    name: test
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- name: Eliminar acceso remoto de root
+  mysql_user:
+    name: root
+    host: "{{ item }}"
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+  loop:
+    - "{{ ansible_hostname }}"
+    - '%'
+
+- name: Crear base de datos WordPress
+  mysql_db:
+    name: "{{ wordpress_db }}"
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- name: Crear usuario WordPress
+  mysql_user:
+    name: "{{ wordpress_user }}"
+    password: "{{ wordpress_password }}"
+    priv: "{{ wordpress_db }}.*:ALL"
+    host: "%"
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
