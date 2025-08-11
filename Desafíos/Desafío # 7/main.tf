@@ -164,7 +164,7 @@ resource "aws_security_group" "web_sg" {
 
 # 9 Instancia ec2
 resource "aws_instance" "web_server" {
-  ami           = "ami-0de716d6197524dd9" # Amazon Linux 2023 
+  ami           = "ami-0de716d6197524dd9" # Amazon Linux 
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public2.id
   associate_public_ip_address = true
