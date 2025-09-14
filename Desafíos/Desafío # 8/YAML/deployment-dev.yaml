@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nest-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nest-dev
+  template:
+    metadata:
+      labels:
+        app: nest-dev
+    spec:
+      containers:
+        - name: app
+          image: jhantoe/desafio-nest:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_URI
+              value: mongodb://mongo:27017/nest
