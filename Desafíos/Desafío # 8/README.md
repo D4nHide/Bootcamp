@@ -23,3 +23,11 @@ Kubernetes Cluster
 ## Requisitos 
 - Cluster de Kubernetes
 - Kubectl
+
+
+
+<img width="1269" height="326" alt="image" src="https://github.com/user-attachments/assets/44eb97ea-98c2-4632-a0b8-9545f97321b8" />
+<img width="1355" height="133" alt="image" src="https://github.com/user-attachments/assets/237a2f29-508f-45d9-a4b3-414ce7d99da8" />
+<img width="1260" height="220" alt="image" src="https://github.com/user-attachments/assets/e0de917f-edda-44a9-9295-a04da38d4056" />
+<img width="1374" height="49" alt="image" src="https://github.com/user-attachments/assets/6f9378f7-b5d8-4aab-975b-24ed42c887d7" />
+
