@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nest-dev
+  name: nest-dev # "nest-prod" si estás corriendo producción
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nest-dev
+      app: nest-dev # "nest-prod" si estás corriendo producción
   template:
     metadata:
       labels:
-        app: nest-dev
+        app: nest-dev # "nest-prod" si estás corriendo producción
     spec:
       containers:
         - name: app
