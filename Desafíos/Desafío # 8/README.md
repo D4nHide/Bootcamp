@@ -23,8 +23,7 @@ Kubernetes Cluster
 ## Requisitos 
 - Cluster de Kubernetes
 - Kubectl
-
-
+- Clonar este repositorio  
 
 <img width="1269" height="326" alt="image" src="https://github.com/user-attachments/assets/44eb97ea-98c2-4632-a0b8-9545f97321b8" />
 <img width="1355" height="133" alt="image" src="https://github.com/user-attachments/assets/237a2f29-508f-45d9-a4b3-414ce7d99da8" />
