@@ -13,10 +13,13 @@ Kubernetes Cluster
 │   │   └── Type: ClusterIP (puerto 27017)
 │   ├── Deployment: nest-dev
 │   │   ├── Pod: nest-dev-xxxxxx
-│   │   │   ├── Container: nest (image: tuusuario/nest-app)
+│   │   │   ├── Container: nest (jhantoe/desafio-nest:latest)
 │   │   │   └── Env: MONGO_URI=mongodb://mongo:27017/nest
 │   ├── Service: nest-service
 │   │   └── Type: ClusterIP (puerto 3000)
 │   └── kubectl port-forward
 │       └── Localhost:3000 → nest-service:3000
 ```
+## Requisitos 
+- Cluster de Kubernetes
+- Kubectl
