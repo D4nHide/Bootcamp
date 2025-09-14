@@ -32,7 +32,7 @@ kubectl get all
 kubectl port-forward service/nest-service --address=0.0.0.0 3000:3000
 ```
 
-# ⚠️ 
+# ⚠️🖐️⚠️🖐️⚠️
 
 No se debe usar --address=0.0.0.0 para entornos productivos
 
