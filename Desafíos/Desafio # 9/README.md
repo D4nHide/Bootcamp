@@ -1,4 +1,4 @@
-Empaquetado de aplicación con helm
+Creación de un Helm chart & Empaquetado de aplicación con helm
 
 # Estructura
 
