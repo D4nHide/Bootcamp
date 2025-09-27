@@ -1,0 +1,2 @@
+- Clona el repositorio
+- Asegurate de tener instalado helm
