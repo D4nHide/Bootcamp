@@ -63,7 +63,7 @@ kubectl apply -f mi-app-argocd.yaml
 | Project          | `default`                                      |
 | Sync Policy      | Manual o Automática                            |
 | Repository URL   | [https://github.com/D4nHide/mi-app-k8s](https://github.com/D4nHide/mi-app-k8s) |
-| Revision         | `HEAD` o `main`                                |
+| Revision         | `main`                                |
 | Path             | `.`                                            |
 | Cluster          | `https://kubernetes.default.svc`               |
 | Namespace        | `default`                                      |
