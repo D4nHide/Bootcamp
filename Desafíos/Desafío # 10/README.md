@@ -1,6 +1,5 @@
 Desplegar Argo CD y configurar un repositorio
 
-
 # Deploy Argo
 ```
 kubectl create namespace argocd
@@ -39,7 +38,7 @@ No se debe usar --address=0.0.0.0 para entornos productivos
 
 <img width="1794" height="724" alt="image" src="https://github.com/user-attachments/assets/9bf297ed-97bf-4c97-b184-39a5b7335e1e" />
 
-# Conectando repositorio púbblico
+# Conectando repositorio público
 - Choose your connection method: HTTP/HTTPS
 - Repository URL
 ```
@@ -67,9 +66,6 @@ kubectl apply -f mi-app-argocd.yaml
 | Path             | `.`                                            |
 | Cluster          | `https://kubernetes.default.svc`               |
 | Namespace        | `default`                                      |
-
-
-
 
 # Resultados
 <img width="977" height="237" alt="image" src="https://github.com/user-attachments/assets/a8137d05-b48a-43fd-887f-949da0fb152a" />
